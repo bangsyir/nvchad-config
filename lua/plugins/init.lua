@@ -15,26 +15,26 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      autotag = {
-        enable = true,
-        filetypes = {
-          "html",
-          "javascript",
-          "typescript",
-          "javascriptreact",
-          "typescriptreact",
-          "svelte",
-          "vue",
-          "tsx",
-          "jsx",
-          "rescript",
-          "css",
-          "lua",
-          "xml",
-          "php",
-          "markdown",
-        },
-      },
+      -- autotag = {
+      --   enable = true,
+      --   filetypes = {
+      --     "html",
+      --     "javascript",
+      --     "typescript",
+      --     "javascriptreact",
+      --     "typescriptreact",
+      --     "svelte",
+      --     "vue",
+      --     "tsx",
+      --     "jsx",
+      --     "rescript",
+      --     "css",
+      --     "lua",
+      --     "xml",
+      --     "php",
+      --     "markdown",
+      --   },
+      -- },
       indent = { enable = true },
       highlight = {
         enable = true,
@@ -77,7 +77,7 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
-    dependencies = "nvim-treesitter/nvim-treesitter",
+    opts = {},
     config = function()
       require("nvim-ts-autotag").setup()
     end,

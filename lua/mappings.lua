@@ -12,4 +12,6 @@ map(
   "<cmd>lua require('kulala').run()<cr>",
   { noremap = true, silent = true, desc = "Execute the request" }
 )
+map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
