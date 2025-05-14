@@ -6,24 +6,32 @@
 local M = {}
 
 M.base46 = {
-  theme = "everforest",
+  theme = "ayu_dark",
   transparency = true,
   hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+    ["@comment"] = { bold = true, underline = true, italic = true, fg = "light_grey" },
+    LineNr = { fg = "light_grey" },
+    FloatBorder = { fg = "light_grey", bg = "NONE" },
+    WinSeparator = { fg = "light_grey", bg = "NONE" },
+    BufferLineTab = { fg = "light_grey", bg = "NONE" },
+    TelescopeBorder = { fg = "light_grey", bg = "NONE" },
+    ["@text.line_number"] = { fg = "light_grey" },
+    Visual = { bg = "light_grey", fg = "NONE" },
+    TodoSignFix,
+    -- override nvim-tree
+    NvimTreeWinSeparator = { fg = "light_grey" },
+    NvimTreeIndentMarker = { fg = "light_grey" },
+    NvimTreeWindowPicker = { fg = "light_grey" },
+    NvimTreeCursorLine = { bg = "light_grey" },
+    TbTabOn = { bg = "light_grey" },
   },
 }
--- ["hrsh7th/nvim-cmp"] = {
---    override_options = function()
---      local cmp = require "cmp"
---
---      return {
---        mapping = {
---          ["<Up>"] = cmp.mapping.select_prev_item(),
---          ["<Down>"] = cmp.mapping.select_next_item(),
---        },
---      }
---    end,
---  },
+
+M.ui = {
+  statusline = {
+    theme = "default",
+    separator_style = "round",
+  },
+}
 
 return M
