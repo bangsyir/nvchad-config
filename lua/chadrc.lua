@@ -17,7 +17,6 @@ M.base46 = {
     TelescopeBorder = { fg = "light_grey", bg = "NONE" },
     ["@text.line_number"] = { fg = "light_grey" },
     Visual = { bg = "light_grey", fg = "NONE" },
-    TodoSignFix,
     -- override nvim-tree
     NvimTreeWinSeparator = { fg = "light_grey" },
     NvimTreeIndentMarker = { fg = "light_grey" },
@@ -29,8 +28,7 @@ M.base46 = {
 
 M.ui = {
   statusline = {
-    theme = "default",
-    separator_style = "round",
+    theme = "vscode_colored",
   },
 }
 
