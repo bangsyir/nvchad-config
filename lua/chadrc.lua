@@ -6,10 +6,11 @@
 local M = {}
 
 M.base46 = {
-  theme = "pastelbeans",
+  theme = "nord",
   transparency = true,
   hl_override = {
     ["@comment"] = { bold = true, underline = true, italic = true, fg = "light_grey" },
+    Comment = { italic = true },
     LineNr = { fg = "light_grey" },
     FloatBorder = { fg = "light_grey", bg = "NONE" },
     WinSeparator = { fg = "light_grey", bg = "NONE" },
@@ -24,18 +25,26 @@ M.base46 = {
     NvimTreeCursorLine = { bg = "light_grey" },
     TbTabOn = { bg = "light_grey" },
   },
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
 }
 
 M.ui = {
   statusline = {
     theme = "vscode_colored",
+    separator_style = "block",
   },
   tabufline = {
     lazyload = false,
+  },
+}
+
+M.term = {
+  float = {
+    relative = "editor",
+    width = 0.75, -- 75% of screen width
+    height = 0.75, -- 75% of screen height
+    row = 0.125, -- Center vertically (0.5 - 0.75/2)
+    col = 0.125, -- Center horizontally (0.5 - 0.75/2)
+    border = "rounded",
   },
 }
 
